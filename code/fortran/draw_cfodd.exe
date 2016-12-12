@@ -1,0 +1,43 @@
+set pm3d map
+set ticslevel 0
+
+set xrange [-30:20]
+set xtics (-20,0,20)
+set yrange [60:0]
+set ytics (60,40,20,0)
+set cbrange [2:4]
+set palette rgbformulae 30,31,32
+
+set lmargin 3.5
+set rmargin 0
+set tmargin 0
+set bmargin 2.5
+set multiplot layout 2,3
+
+set dgrid 30,50
+
+set title 'A-Train/r_{e}=5-10{/Symbol m}m'
+set xlab 'Reflectivity [dBZ]'
+set ylab 'Optical Depth'
+splot 'cfodd_r21_5class_djf.txt' u 1:2:($3*100) notitle
+
+set title 'A-Train/r_{e}=10-15{/Symbol m}m'
+splot 'cfodd_r21_5class_djf.txt' u 1:2:($4*100) notitle
+
+set title 'A-Train/r_{e}=15-20{/Symbol m}m'
+splot 'cfodd_r21_5class_djf.txt' u 1:2:($5*100) notitle
+
+set dgrid 30,50
+
+set title 'GFDL/r_{e}=5-10{/Symbol m}m'
+set xlab 'Reflectivity [dBZ]'
+set ylab 'Optical Depth'
+splot 'cfodd_gfdl_sg_std_jan_4class.txt' u 1:2:($3*100) notitle
+
+set title 'GFDL/r_{e}=10-15{/Symbol m}m'
+splot 'cfodd_gfdl_sg_std_jan_4class.txt' u 1:2:($4*100) notitle
+
+set title 'GFDL/r_{e}=15-20{/Symbol m}m'
+splot 'cfodd_gfdl_sg_std_jan_4class.txt' u 1:2:($5*100) notitle
+
+unset multiplot
