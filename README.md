@@ -1,4 +1,4 @@
-# CFODD
+# CFODD: Cloud Microphysical Process Metrics
 This is a model diagnostic metric that evaluates warm rain formation microphysical processes against satellite observations.
 The methodology combines satellite cloud observables (e.g. radar reflectivity, cloud optical depth and cloud-top effective particle radius) 
 to construct a particular statistics that "fingerprint" signatures of the warm rain formation process in the form of a 
