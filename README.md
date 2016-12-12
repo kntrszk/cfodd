@@ -10,7 +10,8 @@ The corresponding statistics are constructed from output of a given model for co
 to expose how the model realistically represents the warm rain formation process in a statistical sense. 
 The methodology is applicable to either of global climate models and cloud-resolving models.
 
-# Selected Publications
+References
+
 Suzuki, K., G. Stephens, A. Bodas-Salcedo, M. Wang, J.-C. Golaz, T. Yokohata, and T. Koshiro, 2015: Evaluation of the warm rain formation process in global models with satellite observations. J. Atmos. Sci., 72, 3996-4014, doi:10.1175/JAS-D-14-0251.1.
 
 Suzuki, K., J.-C. Golaz, and G. L. Stephens, 2013: Evaluating cloud tuning in a climate model with satellite observations. Geophys. Res. Lett., 40, 4464-4468, doi:10.1002/grl.50874.
