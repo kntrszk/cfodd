@@ -10,6 +10,13 @@ The corresponding statistics are constructed from output of a given model for co
 to expose how the model realistically represents the warm rain formation process in a statistical sense. 
 The methodology is applicable to both global climate models and cloud-resolving models.
 
+# Usage
+Fortran 90 codes for constructing the metric are available at the directory "code/fortran" in this repository. 
+There are two codes: one for satellite-based statistics and the other for model-based statistics using GFDL-CM3 sample output.
+The satellite and model data required to run the codes are available upon request to Kentaroh Suzuki at ksuzuki@aori.u-tokyo.ac.jp.
+The data will be shared through Google drive, to which the user will be given a permission to access.
+The sample results obtained from the code and data are included in the directory "images".
+
 # References
 Suzuki, K., G. Stephens, A. Bodas-Salcedo, M. Wang, J.-C. Golaz, T. Yokohata, and T. Koshiro, 2015: Evaluation of the warm rain formation process in global models with satellite observations. J. Atmos. Sci., 72, 3996-4014, doi:10.1175/JAS-D-14-0251.1.
 
