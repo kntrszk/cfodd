@@ -18,7 +18,7 @@ The data will be shared through Google Drive, to which the user will be given a 
 The sample results obtained from the code and data comparing the satellite-based and model-derived statistics are included in the directory "images".
 
 # Related publications
-Suzuki, K., G. Stephens, A. Bodas-Salcedo, M. Wang, J.-C. Golaz, T. Yokohata, and T. Koshiro, 2015: Evaluation of the warm rain formation process in global models with satellite observations. J. Atmos. Sci., 72, 3996-4014, doi:10.1175/JAS-D-14-0251.1.
+Suzuki, K., G. Stephens, A. Bodas-Salcedo, M. Wang, J.-C. Golaz, T. Yokohata, and T. Koshiro, 2015: Evaluation of the warm rain formation process in global models with satellite observations. J. Atmos. Sci., 72, 3996-4014, doi:10.1175/JAS-D-14-0265.1.
 
 Suzuki, K., J.-C. Golaz, and G. L. Stephens, 2013: Evaluating cloud tuning in a climate model with satellite observations. Geophys. Res. Lett., 40, 4464-4468, doi:10.1002/grl.50874.
 
