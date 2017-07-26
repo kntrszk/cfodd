@@ -10,3 +10,14 @@ Fortran 90 codes for constructing the metric are available at the directory "cod
 [Suzuki, K., J.-C. Golaz, and G. L. Stephens, 2013](http://onlinelibrary.wiley.com/doi/10.1002/grl.50874/abstract): Evaluating cloud tuning in a climate model with satellite observations. Geophys. Res. Lett., 40, 4464-4468, doi:10.1002/grl.50874.
 
 [Suzuki, K., G. L. Stephens, S. C. van den Heever, and T. Y. Nakajima, 2011](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-10-05026.1): Diagnosis of the warm rain process in cloud-resolving models using joint CloudSat and MODIS observations. J. Atmos. Sci., 68, 484-503.
+
+# Input
+| Frequency | Variables | Dimension | CMOR labels | Unit | File Format |
+| --------- | --------- | --------- | ----------- | ---- | ----------- |
+| 6 hourly  | Cloud optical thickness (liquid) | 2D | tau | Unitless | NetCDF |
+|           | Cloud-top effective radius (liquid) | 2D | reffclwtop | micron | NetCDF |
+|           | Cloud-top temperature | 2D | N/A | K | NetCDF |
+|           | Liquid water path | 2D | N/A | kg/m2 | NetCDF |
+|           | In-cloud optical depth (liquid, St) | 3D | dtaus | Unitless | NetCDF |
+|           | Radar Reflectivity | 3D+Subcolumn | N/A | dBZ | NetCDF |
+|           | Fracout | 3D+Subcolumn | N/A | Unitless | NetCDF |
