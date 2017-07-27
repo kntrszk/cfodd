@@ -12,12 +12,31 @@ Fortran 90 codes for constructing the metric are available at the directory "cod
 [Suzuki, K., G. L. Stephens, S. C. van den Heever, and T. Y. Nakajima, 2011](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-10-05026.1): Diagnosis of the warm rain process in cloud-resolving models using joint CloudSat and MODIS observations. J. Atmos. Sci., 68, 484-503.
 
 # Input
-| Frequency | Variables | Dimension | CMOR labels | Unit | File Format |
-| --------- | --------- | --------- | ----------- | ---- | ----------- |
-| 6 hourly  | Cloud optical thickness (liquid) | 2D | tau | Unitless | NetCDF |
-|           | Cloud-top effective radius (liquid) | 2D | reffclwtop | micron | NetCDF |
-|           | Cloud-top temperature | 2D | N/A | K | NetCDF |
-|           | Liquid water path | 2D | N/A | kg/m2 | NetCDF |
-|           | In-cloud optical depth (liquid, St) | 3D | dtaus | Unitless | NetCDF |
-|           | Radar Reflectivity | 3D+Subcolumn | N/A | dBZ | NetCDF |
-|           | Fracout | 3D+Subcolumn | N/A | Unitless | NetCDF |
+| Frequency | Duration | Variables | Dimension | CMOR labels | Unit | File Format |
+| --------- | -------- | --------- | --------- | ----------- | ---- | ----------- |
+| 6 hourly  | 3 months | Cloud optical thickness (liquid) | 2D | tau | Unitless | nc |
+|           |          | Cloud-top effective radius (liquid) | 2D | reffclwtop | micron | nc |
+|           |          | Cloud-top temperature | 2D | N/A | K | nc |
+|           |          | Liquid water path | 2D | N/A | kg/m2 | nc |
+|           |          | In-cloud optical depth (liquid, St) | 3D | dtaus | Unitless | nc |
+|           |          | Radar Reflectivity | 3D+Subcolumn | N/A | dBZ | nc |
+|           |          | Fracout (Subcolumn scence index) | 3D+Subcolumn | N/A | Unitless | nc |
+
+*CMOR labels denoted "N/A" indicate that the variable is not available in current archive of CMIP.
+
+# Output
+The output is the occurrence frequency of radar reflectivity normalized at each in-cloud optical depth in the form of the contoured frequency by optical depth diagram. The sample results obtained from GFDL CM3 model output and satellite observations are provided as "cfodd_gfdl_sg_std_jan_4class.txt" and "cfodd_r21_5class_djf.txt" in the "code/fortran" directory. These are visualized to be displayed as "cfodd_sat_gfdl.png" in the "image" directory.
+
+# Program
+The diagnostic code:
+
+code/fortran/analysis_cfodd_gfdl.f90 (Model: GFDL CM3)
+
+code/fortran/analysis_cfodd_sat.f90 (Satellite)
+
+The visualization script:
+
+code/fortran/draw_cfodd.exe for Gnuplot
+
+# Data availability
+The sample data from satellite and model required to create this diagnostic are available upon request to Kentaroh Suzuki at ksuzuki@aori.u-tokyo.ac.jp.
