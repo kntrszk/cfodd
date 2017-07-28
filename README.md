@@ -9,20 +9,22 @@ Fortran 90 codes for constructing the metric are available at the directory "cod
 
 [Suzuki, K., J.-C. Golaz, and G. L. Stephens, 2013](http://onlinelibrary.wiley.com/doi/10.1002/grl.50874/abstract): Evaluating cloud tuning in a climate model with satellite observations. Geophys. Res. Lett., 40, 4464-4468, doi:10.1002/grl.50874.
 
-[Suzuki, K., G. L. Stephens, S. C. van den Heever, and T. Y. Nakajima, 2011](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-10-05026.1): Diagnosis of the warm rain process in cloud-resolving models using joint CloudSat and MODIS observations. J. Atmos. Sci., 68, 484-503.
+[Suzuki, K., G. L. Stephens, S. C. van den Heever, and T. Y. Nakajima, 2011](http://journals.ametsoc.org/doi/abs/10.1175/JAS-D-10-05026.1): Diagnosis of the warm rain process in cloud-resolving models using joint CloudSat and MODIS observations. J. Atmos. Sci., 68, 484-503, doi:10.1175/JAS-D-10-05026.1.
 
 # Input
 | Frequency | Duration | Variables | Dimension | CMOR labels | Unit | File Format |
 | --------- | -------- | --------- | --------- | ----------- | ---- | ----------- |
-| 6 hourly  | 3 months | Cloud optical thickness (liquid) | 2D | tau | Unitless | nc |
-|           |          | Cloud-top effective radius (liquid) | 2D | reffclwtop | micron | nc |
-|           |          | Cloud-top temperature | 2D | N/A | K | nc |
-|           |          | Liquid water path | 2D | N/A | kg/m2 | nc |
-|           |          | In-cloud optical depth (liquid, St) | 3D | dtaus | Unitless | nc |
+| 6 hourly  | 3 months | Cloud Optical Thickness (liquid) | 2D | tau | Unitless | nc |
+|           |          | Cloud-top Effective Droplet Radius | 2D | reffclwtop | m | nc |
+|           |          | Stratiform In-Cloud Optical Depth | 3D | dtaus | Unitless | nc |
 |           |          | Radar Reflectivity | 3D+Subcolumn | N/A | dBZ | nc |
-|           |          | Fracout (Subcolumn scence index) | 3D+Subcolumn | N/A | Unitless | nc |
+|           |          | Fracout | 3D+Subcolumn | N/A | Unitless | nc |
 
 *CMOR labels denoted "N/A" indicate that the variable is not available in current archive of CMIP.
+
+*Radar Reflectivity is CloudSat radar reflectivity, which is computed and named "cfad_ze" in COSP.
+
+*Fracout is the integer denoting the subcolumn scene type defined in COSP as "frac_out": =0 (Clr), =1 (St) and =2 (Cu)
 
 # Output
 The output is the occurrence frequency of radar reflectivity normalized at each in-cloud optical depth in the form of the contoured frequency by optical depth diagram. The sample results obtained from GFDL CM3 model output and satellite observations are provided as "cfodd_gfdl_sg_std_jan_4class.txt" and "cfodd_r21_5class_djf.txt" in the "code/fortran" directory. These are visualized to be displayed as "cfodd_sat_gfdl.png" in the "image" directory.
